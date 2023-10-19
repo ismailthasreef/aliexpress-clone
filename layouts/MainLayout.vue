@@ -99,13 +99,11 @@
       </div>
     </div>
   </div>
-    <Loading/>
+    <!-- <Loading/> -->
     <div class="lg:pt-[150px] md:pt-[130px] pt-[80px]">
       <slot/>
     </div>
-
-    <Footer></Footer>
-
+    <Footer/>
 </template>
 
 <script setup>
