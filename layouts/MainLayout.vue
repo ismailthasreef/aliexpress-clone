@@ -95,18 +95,19 @@
             <!-- cart count ends -->
           </button>
         </NuxtLink>
-        <!-- //Mobile menu toggle -->
-        <button @click="userStore.isMenuOverlay = true"
-          class="md:hidden block rounded-full p-1.5 -mt-[4px] hover:bg-gray-200">
-          <Icon name="radix-icons:hamburger-menu" size="33" />
-        </button>
-        <!-- ends here -->
+          <MobileMenu/>
       </div>
     </div>
   </div>
+    <!-- <Loading/> -->
+    <div class="lg:pt-[150px] md:pt-[130px] pt-[80px]">
+      <slot/>
+    </div>
+    <Footer/>
 </template>
 
 <script setup>
+import MobileMenu from '~/layouts/MobileMenu/header.vue'
 let isAccountMenu = ref(false);
 let searchItem = ref('')
 let isSearching = ref(true)
