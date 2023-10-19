@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import MainLayout from '~/layouts/MainLayout.vue';
-import ProductHolder from '~/components/ProductHolder.vue';
+import ProductHolder from '~/components/products/ProductHolder.vue';
 import type {Product} from '~/types/index'
 
 const products : Product[] = [
