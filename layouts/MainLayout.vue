@@ -99,7 +99,7 @@
       </div>
     </div>
   </div>
-    <!-- <Loading/> -->
+    <Loading v-if="userStore.isLoading"/>
     <div class="lg:pt-[150px] md:pt-[130px] pt-[80px]">
       <slot/>
     </div>
@@ -107,6 +107,8 @@
 </template>
 
 <script setup>
+import { useUserStore } from '~/stores/user';
+const userStore = useUserStore()
 import MobileMenu from '~/layouts/MobileMenu/header.vue'
 let isAccountMenu = ref(false);
 let searchItem = ref('')
