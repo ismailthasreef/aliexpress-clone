@@ -88,18 +88,19 @@
           <button class="relative md:block hidden" @mouseenter="isCartHover = true" @mouseleave="isCartHover = false">
             <!-- cart count -->
             <span class="absolute flex items-center justify-center -right-[3px] top-0 bg-[#FF4646] h-[17px] min-w-[17px]text-xs
-                      text-white  px-0.5 rounded-full ">
-              0
-            </span>
+                      text-white  px-0.5 rounded-full ">0 </span>
             <div class="min-w-[40px]">
-              <Icon name="ph:shopping-cart-simple-light"
-              size="33" :color="isCartHover ? '#FF4646' : ''"/>
-
+              <Icon name="ph:shopping-cart-simple-light" size="33" :color="isCartHover ? '#FF4646' : ''" />
             </div>
             <!-- cart count ends -->
           </button>
-
         </NuxtLink>
+        <!-- //Mobile menu toggle -->
+        <button @click="userStore.isMenuOverlay = true"
+          class="md:hidden block rounded-full p-1.5 -mt-[4px] hover:bg-gray-200">
+          <Icon name="radix-icons:hamburger-menu" size="33" />
+        </button>
+        <!-- ends here -->
       </div>
     </div>
   </div>
