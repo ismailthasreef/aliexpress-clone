@@ -2,8 +2,8 @@
     <MainLayout>
         <div id="IndexPage" class="mt-4 max-w-[1200px] mx-auto px-2">
             <div class="grid xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 text-center"> 
-                <div v-if="products" v-for="items in products" :key="items.id">
-                    <ProductHolder :products="items"/>
+                <div v-if="products" v-for="product in products" :key="product.id">
+                    <ProductHolder :product="product"/>
                 </div>
             </div>
         </div>
