@@ -25,7 +25,7 @@
                 </p>
 
                 <p class="px-1 flex items-start pt-0.5 text-xs text-start mb-2 text-[#252525]">
-                    {{ product.name.substring(0,60) }}
+                    {{ product.name.substring(0, 60) }}
                 </p>
 
                 <p class="px-1 pb-1 flex items-start">
