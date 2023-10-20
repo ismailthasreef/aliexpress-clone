@@ -1,5 +1,5 @@
 <template>
-  <div id="MainLayout" class="w-full fixed z-50">
+  <div id="MainLayout" class="w-full fixed z-50 border-out">
     <div id="TopMenu" class="w-full bg-[#FAFAFA] border-b md:block hidden">
       <ul class="flex items-center justify-end text-xs text-[#333333] font-light px-2 h-10 bg-[#FAFAFA] max-w-[1200px]">
         <li class="border-r border-gray-400 px-3 hover:text-[#FF4646] cursor-pointer">
@@ -69,7 +69,8 @@
                 <Icon name="ph:magnifying-glass" size="20" color="#fff" />
               </button>
             </div>
-            <span class="text-xs text-[#939090dd] text-[14px] flex items-center justify-center mt-2">Kitchenware | Fashion | Households | Electronics | Mobile phones </span>
+            <span class="text-xs text-[#939090dd] text-[14px] flex items-center justify-center mt-2">Kitchenware | Fashion
+              | Households | Electronics | Mobile phones </span>
             <!-- search result div -->
             <div class="absolute bg-white max-w-[700px] h-auto w-full">
               <div v-if="false" class="p-1">
@@ -96,17 +97,18 @@
             <!-- cart count ends -->
           </button>
         </NuxtLink>
-          <MobileMenu/>
+        <MobileMenu />
       </div>
     </div>
   </div>
-    <Loading v-if="userStore.isLoading"/>
-    <div class="lg:pt-[150px] md:pt-[130px] pt-[80px]">
-      <slot name="featured"/>
-      <slot name="hot"/>
-      <slot name="best"/>
-    </div>
-    <Footer/>
+  <!-- <Loading v-if="userStore.isLoading" /> -->
+ 
+  <div class="lg:pt-[150px] md:pt-[130px] pt-[80px] border-out">
+    <slot name="featured" />
+    <slot name="hot" />
+    <slot name="best" />
+  </div>
+  <Footer />
 </template>
 
 <script setup>
@@ -120,4 +122,9 @@ let isSearching = ref(true)
 let isCartHover = ref(false)
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.border-out {
+  border: 1px solid red;
+}
+
+</style>
