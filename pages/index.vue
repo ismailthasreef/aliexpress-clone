@@ -1,14 +1,38 @@
 <template>
     <MainLayout>
+       <template #featured>
         <div id="IndexPage" class="mt-4 max-w-[1200px] mx-auto px-2">
+          <div class="text-2xl font-semibold mb-5">Featured Products</div>
             <div class="grid xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 text-center"> 
                 <div v-if="products" v-for="product in products" :key="product.id">
                     <ProductHolder :product="product"/>
                 </div>
             </div>
         </div>
+       </template>
+
+       <template #hot>
+        <div id="IndexPage" class="mt-4 max-w-[1200px] mx-auto px-2">
+          <div class="text-2xl font-semibold mb-5">Hot Products</div>
+            <div class="grid xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 text-center"> 
+                <div v-if="products" v-for="product in products" :key="product.id">
+                    <ProductHolder :product="product"/>
+                </div>
+            </div>
+        </div>
+       </template>
+
+       <template #best>
+        <div id="IndexPage" class="mt-4 max-w-[1200px] mx-auto px-2">
+          <div class="text-2xl font-semibold mb-5">Best Selling</div>
+            <div class="grid xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 text-center"> 
+                <div v-if="products" v-for="product in products" :key="product.id">
+                    <ProductHolder :product="product"/>
+                </div>
+            </div>
+        </div>
+       </template>
     </MainLayout>
-    
 </template>
 
 <script setup lang="ts">

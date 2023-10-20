@@ -69,6 +69,7 @@
                 <Icon name="ph:magnifying-glass" size="20" color="#fff" />
               </button>
             </div>
+            <span class="text-xs text-[#939090dd] text-[14px] flex items-center justify-center mt-2">Kitchenware | Fashion | Households | Electronics | Mobile phones </span>
             <!-- search result div -->
             <div class="absolute bg-white max-w-[700px] h-auto w-full">
               <div v-if="false" class="p-1">
@@ -101,7 +102,9 @@
   </div>
     <Loading v-if="userStore.isLoading"/>
     <div class="lg:pt-[150px] md:pt-[130px] pt-[80px]">
-      <slot/>
+      <slot name="featured"/>
+      <slot name="hot"/>
+      <slot name="best"/>
     </div>
     <Footer/>
 </template>
@@ -110,6 +113,7 @@
 import { useUserStore } from '~/stores/user';
 const userStore = useUserStore()
 import MobileMenu from '~/layouts/MobileMenu/header.vue'
+import HomeBannerSlider from '~/components/slider/HomeBannerSlider.vue';
 let isAccountMenu = ref(false);
 let searchItem = ref('')
 let isSearching = ref(true)
