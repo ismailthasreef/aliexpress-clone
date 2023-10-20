@@ -16,6 +16,26 @@ import MainLayout from '~/layouts/MainLayout.vue';
 import ProductHolder from '~/components/products/ProductHolder.vue';
 import type {Product} from '~/types/index'
 
+useHead({
+  title: 'Ali Express | Online E-COmmerce',
+  meta: [
+    { name: 'description', content: 'Ali Express | Online E-COmmerce' }
+  ],
+  bodyAttrs: {
+    class: 'test'
+  },
+  script: [ { innerHTML: 'console.log(\'Hello world\')' } ]
+})
+
+useSeoMeta({
+  title: 'Ali Express | Online E-COmmerce',
+  ogTitle: 'Ali Express',
+  description: 'for over 111 million quality deals on Fashion, Accessories, Computer Electronics, Toys, Tools,Home Improvement, Home Appliances, Home & Garden and more!',
+  ogImage: 'https://ae01.alicdn.com/kf/Sa0202ec8a96a4085962acfc27e9ffd04F/1080x1080.jpg',
+  twitterCard: 'summary_large_image',
+  keywords : 'AliExpress, Online shopping, Automotive, Phones, Accessories, Computers, Electronics, Fashion, Beauty, Health, Home, Garden, Toys, Sports, Weddings,AliExpres'
+})
+
 const products : Product[] = [
   {
     id: 1,
