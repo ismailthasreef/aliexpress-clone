@@ -34,8 +34,11 @@
        </template>
 
        <template #banner>
-        
        </template>
+
+       <template #category></template>
+
+
     </MainLayout>
 </template>
 
@@ -43,7 +46,6 @@
 import MainLayout from '~/layouts/MainLayout.vue';
 import ProductHolder from '~/components/products/ProductHolder.vue';
 import type {Product} from '~/types/index'
-import HomeBannerSlider from '~/components/slider/HomeBannerSlider.vue';
 
 useHead({
   title: 'Ali Express | Online E-COmmerce',

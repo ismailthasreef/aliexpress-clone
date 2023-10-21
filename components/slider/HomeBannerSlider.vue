@@ -14,7 +14,6 @@
       <swiper-slide v-for="slide in slides" :key="slide.id">
         <div class="swiper-image">
           <img :src="slide.img" alt="Slide Image" />
-          <div class="swiper-pagination"></div>
         </div>
         <div class="flex row w-auto p-2 absolute top-40 left-10 z-10">
             <div class="banner-text flex flex-col">
@@ -38,12 +37,12 @@ import "swiper/css";
 const slides = [
   {
     name: "Slide 1",
-    img: "https://picsum.photos/1200/440?image=194",
+    img: "https://cdn.initial.com/content/local/ie-ini/images/desktop/main_bacl-to-work-banner-desktop.jpg",
     offerTitle: "NEW YEAR OFFER",
   },
   {
     name: "Slide 2",
-    img: "https://picsum.photos/1200/440?image=195",
+    img: "https://okotech.in/wp-content/uploads/2021/10/villa-window-banner-1200x440.jpg",
     offerTitle: "NEW YEAR OFFER2",
   },
   {
