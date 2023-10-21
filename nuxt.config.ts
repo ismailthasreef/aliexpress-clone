@@ -11,6 +11,9 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     // '@nuxtjs/supabase',
   ],
+  css: [
+    '~/assets/global.css', 
+  ],
   build: {
     transpile: ['pinia-plugin-persistedstate'],
   },

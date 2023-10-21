@@ -2,7 +2,7 @@
     <MainLayout>
        <template #featured>
         <div id="IndexPage" class="mt-4 max-w-[1200px] mx-auto px-2">
-          <div class="text-2xl font-semibold mb-5">Featured Products</div>
+          <div class="text-2xl font-semibold mb-5">FATURED PRODUCTS</div>
             <div class="grid xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 text-center"> 
                 <div v-if="products" v-for="product in products" :key="product.id">
                     <ProductHolder :product="product"/>
@@ -13,7 +13,7 @@
 
        <template #hot>
         <div id="IndexPage" class="mt-4 max-w-[1200px] mx-auto px-2">
-          <div class="text-2xl font-semibold mb-5">Hot Products</div>
+          <div class="text-2xl font-semibold mb-5">HOT PRODUCTS</div>
             <div class="grid xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 text-center"> 
                 <div v-if="products" v-for="product in products" :key="product.id">
                     <ProductHolder :product="product"/>
@@ -24,13 +24,17 @@
 
        <template #best>
         <div id="IndexPage" class="mt-4 max-w-[1200px] mx-auto px-2">
-          <div class="text-2xl font-semibold mb-5">Best Selling</div>
+          <div class="text-2xl font-semibold mb-5">BEST SELLING</div>
             <div class="grid xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 text-center"> 
                 <div v-if="products" v-for="product in products" :key="product.id">
                     <ProductHolder :product="product"/>
                 </div>
             </div>
         </div>
+       </template>
+
+       <template #banner>
+        
        </template>
     </MainLayout>
 </template>
@@ -39,6 +43,7 @@
 import MainLayout from '~/layouts/MainLayout.vue';
 import ProductHolder from '~/components/products/ProductHolder.vue';
 import type {Product} from '~/types/index'
+import HomeBannerSlider from '~/components/slider/HomeBannerSlider.vue';
 
 useHead({
   title: 'Ali Express | Online E-COmmerce',
