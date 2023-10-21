@@ -1,6 +1,7 @@
 <template>
     <Header/>
-        <div id="itemPage" class="mt-5 max-w-[1200px] mx-auto px-2 border-4">
+    <div class="lg:pt-[150px] md:pt-[130px] pt-[80px]">
+        <div id="itemPage" class="mt-5 max-w-[1200px] mx-auto px-2">
             <div class="md:flex gap-4 justify-between mx-auto w-full">
                 <div class="md:w-[40%]">
                     <img class="rounded-lg object-fill" src="https://picsum.photos/id/212/800/800">
@@ -13,8 +14,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
+    </div>
 </template>
 <script setup>
 import Header from "~/components/global/Header.vue";

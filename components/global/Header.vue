@@ -111,6 +111,12 @@
 
   <script setup>
   import MobileMenu from "~/layouts/MobileMenu/header.vue";
+  import { useUserStore } from "~/stores/user";
 
+  const userStore = useUserStore();
+    let isAccountMenu = ref(false);
+    let searchItem = ref("");
+    let isSearching = ref(true);
+    let isCartHover = ref(false);
 
 </script>
