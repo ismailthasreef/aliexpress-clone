@@ -33,9 +33,7 @@
         </div>
        </template>
 
-       <template #banner>
-       </template>
-
+       <template #banner></template>
        <template #category></template>
 
 

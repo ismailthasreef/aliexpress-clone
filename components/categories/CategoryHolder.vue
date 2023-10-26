@@ -1,23 +1,28 @@
 <template>
-<div class="max-w-[1200px] mx-auto bg-white shadow-sm px-5 py-5 max-h-80">
-    <swiper  
-        :effect="'fade'" 
-        :grabCursor="true" 
-        :slides-per-view="10"
-        :space-between="15"
-      class="mySwiper">
-        <swiper-slide v-for="slide in slides" :key="slide.id">
-          <div class="swiper-image">
-            <img class="h-[130px]" :src="slide.img" alt="Slide Image" />
-          </div>
-        </swiper-slide>
-      </swiper>
-</div>
+  <div class="max-w-[1200px] mx-auto bg-white shadow-sm px-5 py-5 max-h-80">
+    <swiper v-bind="swiperConfig" class="mySwiper">
+      <swiper-slide v-for="slide in slides" :key="slide.name">
+        <div class="swiper-image">
+          <img class="h-[130px]" :src="slide.img" alt="Slide Image" loading="lazy" />
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+      </swiper-slide>
+    </swiper>
+  </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
+
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
+
+const swiperConfig = {
+  spaceBetween: 16,
+  loop: true,
+  autoplay: true,
+  slidesPerView: 10
+};
+
 const slides = [
   {
     name: "Slide 1",
@@ -102,8 +107,12 @@ const slides = [
 ];
 
 
+const onSwiper = (swiper : any) => {
+  console.log(swiper);
+};
+const onSlideChange = () => {
+  console.log("slide change");
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
